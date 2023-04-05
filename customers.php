@@ -10,7 +10,7 @@ require_once "database/connection.php";
   <?php require 'includes/navbar.php'; ?>
 
   <div class="container mt-4">
-    <h2>Customers</h2>           
+    <h2>List of Customers</h2>           
     <table class="table table-striped">
       <thead>
         <tr>
