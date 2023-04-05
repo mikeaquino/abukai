@@ -2,5 +2,5 @@
 Abukai Test Engineering Project
 
 # LOGIN CREDENTIALS
-Username: user
+Username: user\
 Password: pass
