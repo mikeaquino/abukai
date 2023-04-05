@@ -6,7 +6,7 @@
 				Action
 			</a>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Create New Entry</a>
+				<a class="dropdown-item" href="create_new_entry.php">Create New Entry</a>
 				<a class="dropdown-item" href="#">Logout</a>
 			</div>
 		</li>
