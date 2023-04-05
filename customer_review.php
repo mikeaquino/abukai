@@ -18,9 +18,7 @@ $customer = $result->fetch();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Abukai - Project</a>
-  </nav>
+  <?php require 'includes/navbar.php'; ?>
 
   <div class="container mt-4">
   	<div class="card">
