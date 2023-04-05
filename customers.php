@@ -11,7 +11,7 @@ require_once "database/connection.php";
 
   <div class="container mt-4">
     <h2>List of Customers</h2>           
-    <table class="table table-striped">
+    <table class="table table-hover mt-4">
       <thead>
         <tr>
           <th>Lastname</th>
