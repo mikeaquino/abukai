@@ -25,7 +25,7 @@ $result->bindParam(":file_path", $filePath);
 $result->bindParam(":id", $id);
 
 if ($result->execute()) {
-	header('Location: /');
+	header('Location: customers.php');
 } else {
 	echo "Error!";
 }
