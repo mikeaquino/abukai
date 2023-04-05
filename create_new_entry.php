@@ -40,4 +40,5 @@
   </form>
 </div>
 
+<?php require 'includes/js_closing.php'; ?>
 <?php require 'includes/body_closing.php'; ?>
