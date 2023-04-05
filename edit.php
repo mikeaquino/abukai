@@ -1,7 +1,16 @@
 <?php
+require_once "database/connection.php";
+
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
+
+$sql = "SELECT * FROM customers WHERE id = :id";
+$result = $conn->prepare($sql);
+$result->bindParam(":id", $id);
+
+$result->execute();
+$customer = $result->fetch();
 ?>
 
 <?php require 'includes/header.php'; ?>
@@ -14,15 +23,15 @@ if (isset($_GET['id'])) {
     <input type="hidden" name="id" value="<?php echo $id;?>">
     <div class="form-group">
       <label for="lname">Lastname:</label>
-      <input type="text" class="form-control" id="lname" name="lname" required>
+      <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $customer['lastname']; ?>" required>
     </div>
     <div class="form-group">
       <label for="fname">Firstname:</label>
-      <input type="text" class="form-control" id="fname" name="fname" required>
+      <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $customer['firstname']; ?>" required>
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
+      <input type="email" class="form-control" id="email" name="email" value="<?php echo $customer['email']; ?>" required>
     </div>
     <div class="form-group">
       <label for="country">Country:</label>
@@ -36,7 +45,7 @@ if (isset($_GET['id'])) {
     </div>
     <div class="form-group">
       <label for="city">City:</label>
-      <input type="text" class="form-control" id="city" name="city" required>
+      <input type="text" class="form-control" id="city" name="city" value="<?php echo $customer['city']; ?>" required>
     </div>
     <div class="form-group">
       <label for="img">Select image:</label>

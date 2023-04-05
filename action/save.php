@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $country = $_POST['country'];
 $city = $_POST['city'];
 
-move_uploaded_file($_FILES["img"]["tmp_name"],"uploads/" . $_FILES["img"]["name"]);
+move_uploaded_file($_FILES["img"]["tmp_name"],"../uploads/" . $_FILES["img"]["name"]);
 $filePath ="uploads/".$_FILES["img"]["name"];
 $id = $_POST['id'];
 
@@ -25,7 +25,7 @@ $result->bindParam(":file_path", $filePath);
 $result->bindParam(":id", $id);
 
 if ($result->execute()) {
-	header('Location: customers.php');
+	header('Location: ../customers.php');
 } else {
 	echo "Error!";
 }
