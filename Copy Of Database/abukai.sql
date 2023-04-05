@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2023 at 12:00 PM
+-- Generation Time: Apr 05, 2023 at 01:39 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.3.33
 
@@ -38,13 +38,6 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `customers`
---
-
-INSERT INTO `customers` (`id`, `lastname`, `firstname`, `email`, `city`, `country`, `file_path`) VALUES
-(1, 'James', 'Lebron', 'lebronjames@email.com', 'City', 'France', 'uploads/spaldingball.jpg');
-
---
 -- Indexes for dumped tables
 --
 
@@ -62,7 +55,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
