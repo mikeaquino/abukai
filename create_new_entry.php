@@ -36,9 +36,10 @@
       <input type="file" class="form-control" id="img" name="img" accept="image/*" required>
     </div>
     <button type="submit" name="save" class="btn btn-primary">Save</button>
-    <button type="button" class="btn btn-secondary">Cancel</button>
+    <button onclick="refresh()" type="button" class="btn btn-secondary">Cancel</button>
   </form>
 </div>
 
 <?php require 'includes/js_closing.php'; ?>
+<script src="js/script.js"></script>
 <?php require 'includes/body_closing.php'; ?>
