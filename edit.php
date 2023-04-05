@@ -11,6 +11,11 @@ $result->bindParam(":id", $id);
 
 $result->execute();
 $customer = $result->fetch();
+
+$lastName = htmlspecialchars($customer['lastname']);
+$firstName = htmlspecialchars($customer['firstname']);
+$email = htmlspecialchars($customer['email']);
+$city = htmlspecialchars($customer['city']);
 ?>
 
 <?php require 'includes/header.php'; ?>
@@ -23,15 +28,15 @@ $customer = $result->fetch();
     <input type="hidden" name="id" value="<?php echo $id;?>">
     <div class="form-group">
       <label for="lname">Lastname:</label>
-      <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $customer['lastname']; ?>" required>
+      <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $lastName; ?>" required>
     </div>
     <div class="form-group">
       <label for="fname">Firstname:</label>
-      <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $customer['firstname']; ?>" required>
+      <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $firstName; ?>" required>
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" value="<?php echo $customer['email']; ?>" required>
+      <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" required>
     </div>
     <div class="form-group">
       <label for="country">Country:</label>
@@ -45,7 +50,7 @@ $customer = $result->fetch();
     </div>
     <div class="form-group">
       <label for="city">City:</label>
-      <input type="text" class="form-control" id="city" name="city" value="<?php echo $customer['city']; ?>" required>
+      <input type="text" class="form-control" id="city" name="city" value="<?php echo $city; ?>" required>
     </div>
     <div class="form-group">
       <label for="img">Select image:</label>
