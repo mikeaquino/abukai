@@ -1,3 +1,7 @@
 table, th, td {
   border:1px solid black;
 }
+
+.login_card-width {
+  width: 400px;
+}
