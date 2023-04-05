@@ -34,7 +34,7 @@ require_once "database/connection.php";
           <td><?php echo $customer['email']; ?></td>
           <td><?php echo $customer['city']; ?></td>
           <td><?php echo $customer['country']; ?></td>
-          <td><img src="uploads/spaldingball.jpg" width="100%" height="150px"></td>
+          <td><img src="<?php echo $customer['file_path']; ?>" width="100%" height="150px"></td>
           <td>
             <a href="edit.php?id=<?php echo $customer['id']; ?>">Edit</a>&nbsp;
             <a href="customer_review.php?email=<?php echo $customer['email']; ?>">Information Review</a>
