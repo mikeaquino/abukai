@@ -2,7 +2,7 @@
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($username == 'user' && $password == 'pass') {
+if ($username == 'testengineer' && $password == 'testEngrPass123!!') {
 	header('Location: ../customers.php');
 } else {
 	header('Location: ../');
